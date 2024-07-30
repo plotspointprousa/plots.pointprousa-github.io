@@ -137,8 +137,8 @@ const cities = [
     { lat: 37.774929, long: -122.419418, name: 'San Francisco' },
     { lat: 23.810310, long: 90.412521, name: 'Dhaka' },
     { lat: 30.044420, long: 31.235712, name: 'Cairo' },
-    { lat: 44.426767, long: 26.102538, name: 'Bucharest' },
-    { lat: 39.961176, long: -82.998795, name: 'Columbus' }
+    { lat: 44.426767, long: 26.102538, name: 'Bucharest' }
+    // { lat: 39.961176, long: -82.998795, name: 'Columbus' }
 ];
 
 
