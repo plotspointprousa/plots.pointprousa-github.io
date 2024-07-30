@@ -3,6 +3,7 @@ import os
 import subprocess
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+from datetime import datetime
 
 class AutoCommitHandler(FileSystemEventHandler):
     def __init__(self, repo_path):
@@ -23,7 +24,8 @@ class AutoCommitHandler(FileSystemEventHandler):
     def commit_and_push(self):
         os.chdir(self.repo_path)
         subprocess.run(['git', 'add', '.'])
-        subprocess.run(['git', 'commit', '-m', 'Auto commit'])
+        commit_message = f'Auto commit on {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
+        subprocess.run(['git', 'commit', '-m', commit_message])
         subprocess.run(['git', 'push'])
 
 if __name__ == "__main__":
