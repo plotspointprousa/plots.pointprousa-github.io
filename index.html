@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMC 3D plot.js</title>
+    <style>
+      body { margin: 0; }
+      canvas { display: block; }
+      #legend {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background: rgba(0, 0, 0, 0.5);
+          color: white;
+          padding: 10px;
+          border-radius: 5px;
+      }
+      .city-label {
+          font-family: Arial, sans-serif;
+          font-size: 12px;
+          color: #000;
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid #000;
+          padding: 2px;
+          border-radius: 3px;
+      }
+      #stats {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+  </style>
+    <script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+					"jsm/":  "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+				  }
+			}
+		</script>
+  </head>
+  <body>
+    <div id="container">
+        <div id="legend">
+            <h3>Legend</h3>
+            <ul>
+                <li><span style="background: #d73d3d; width: 10px; height: 10px; display: inline-block; margin-right: 5px;"></span> Trajectory</li>
+                <li><span style="background: #23238E; width: 10px; height: 10px; display: inline-block; margin-right: 5px;"></span> Cities</li>
+                <li><span style="background: #d7d43d; width: 10px; height: 10px; display: inline-block; margin-right: 5px;"></span> AMC points</li>
+            </ul>
+        </div>
+        <div id="separator"></div>
+        <div id="stats">Loading stats...</div>
+    </div>
+    <script type="module" src="earth_3d.js"></script>
+</body>
+
+</html>
+
